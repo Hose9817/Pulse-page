@@ -1,0 +1,47 @@
+.advantage {
+  min-height: 473px;
+  background-color: #F6F6F6;
+  padding: 70px 0 65px 0;
+
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #0D0D0D;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+
+  &__block {
+    width: 260px;
+    height: 90px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    &__title {
+      margin: 35px 0 20px 0;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      color: #0D0D0D;
+    }
+    &__text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      color: #0D0D0D;
+      a {
+        //text-decoration: none;
+        color: #c70101;
+        font-family: "DIN Alternate";
+      }
+    }
+  }
+}
