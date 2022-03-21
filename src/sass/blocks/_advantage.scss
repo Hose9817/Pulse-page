@@ -18,8 +18,7 @@
   }
 
   &__block {
-    width: 260px;
-    height: 90px;
+    width: 225px;
     img {
       display: block;
       margin: 0 auto;
@@ -37,10 +36,13 @@
       line-height: 18px;
       text-align: center;
       color: #0D0D0D;
+      br {
+        display: none;
+      }
       a {
         //text-decoration: none;
         color: #c70101;
-        font-family: "DIN Alternate";
+        font-family: "Helvetica";
       }
     }
   }

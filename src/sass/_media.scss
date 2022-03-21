@@ -1,0 +1,156 @@
+@media (max-width: 1200px) {
+  .header {
+    &__official {
+      font-size: 14px;
+
+      span {
+        font-size: 18px;
+        margin-top: 3px;
+      }
+    }
+  }
+  .advantage {
+    &__block {
+      &__text {
+        font-size: 16px;
+        br {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .promo {
+    &__header {
+      font-size: 36px;
+    }
+
+    &__subheader {
+      font-size: 21px;
+    }
+  }
+  .consultation {
+    .title {
+      &_left {
+        font-size: 30px;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .promo {
+    &__header {
+      font-size: 30px;
+    }
+
+    &__subheader {
+      font-size: 16px;
+    }
+
+    &__icons {
+      width: 400px;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+
+    &__contacts {
+      margin-top: -5px;
+    }
+
+    &__official {
+      display: none;
+    }
+  }
+
+  .button {
+    &_main {
+      width: 250px;
+      font-size: 15px;
+    }
+  }
+
+  .advantage {
+    &__group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__block {
+      margin-bottom: 70px;
+
+      &__title {
+        margin: 15px 0 10px 0;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 575px) {
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    &__logo {
+      display: none;
+    }
+  }
+  .promo {
+    min-height: 400px;
+    &__icons {
+      display: none;
+    }
+    &__header {
+      font-size: 23px;
+    }
+    &__subheader{
+      font-size: 13px;
+    }
+  }
+  .advantage {
+    &__title {
+      font-size: 26px;
+    }
+    &__block {
+      margin-bottom: 40px;
+    }
+  }
+  .consultation {
+    min-height: 600px;
+    padding: 70px 0;
+    .title {
+      &_left {
+        font-size: 20px;
+        margin-bottom: 20px;
+        br {
+          display: none;
+        }
+      }
+    }
+    &__descr {
+      font-size: 18px;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
