@@ -13,6 +13,7 @@
     &__block {
       &__text {
         font-size: 16px;
+
         br {
           display: inline-block;
         }
@@ -23,6 +24,8 @@
 
 @media (max-width: 991px) {
   .promo {
+    padding: 20px 15px 90px 15px;
+
     &__header {
       font-size: 36px;
     }
@@ -32,11 +35,21 @@
     }
   }
   .consultation {
+    padding: 0 20px;
+
     .title {
       &_left {
         font-size: 30px;
       }
     }
+  }
+
+  .catalog {
+    padding: 27px 15px 0 15px;
+  }
+
+  .reviews {
+    padding: 0 15px;
   }
 
 }
@@ -96,25 +109,52 @@
     }
   }
 
+  .carousel {
+    &__inner {
+      max-width: 576px;
+      margin: 0 auto;
+    }
+  }
+
+  .catalog {
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      //justify-content: center;
+    }
+  }
+
+  .reviews {
+    &__block {
+      &__photo {
+        margin-right: 20px;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 575px) {
   .header {
     display: flex;
     justify-content: flex-end;
+
     &__logo {
       display: none;
     }
   }
   .promo {
     min-height: 400px;
+
     &__icons {
       display: none;
     }
+
     &__header {
       font-size: 23px;
     }
-    &__subheader{
+
+    &__subheader {
       font-size: 13px;
     }
   }
@@ -122,25 +162,85 @@
     &__title {
       font-size: 26px;
     }
+
     &__block {
       margin-bottom: 40px;
     }
   }
   .consultation {
     min-height: 600px;
-    padding: 70px 0;
+    padding: 70px 10px;
+
     .title {
       &_left {
         font-size: 20px;
         margin-bottom: 20px;
+
         br {
           display: none;
         }
       }
     }
+
     &__descr {
       font-size: 18px;
     }
+  }
+
+  .catalog {
+    &-item {
+      width: 290px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    &__tabs {
+      flex-direction: column;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    &__tab {
+      width: 150px;
+      height: 30px;
+      font-size: 12px;
+      line-height: 30px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .reviews {
+    margin: 20px 0;
+    min-height: 500px;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__blocks {
+      margin-bottom: 0;
+    }
+
+    &__block {
+      flex-direction: column;
+      align-items: center;
+
+      &__name, &__score {
+        text-align: center;
+      }
+
+      &__text {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      &__photo {
+        margin-bottom: 10px;
+      }
+    }
+
   }
 
 }
