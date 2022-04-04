@@ -55,39 +55,6 @@ $(document).ready(function () {
 
     //Validation of forms
 
-    // $('#consultation-form').validate();
-    // $('#consultation form').validate({
-    //     rules: {
-    //         name: {
-    //             required: true,
-    //             minlength: 2
-    //         },
-    //         phone: 'required',
-    //         email: {
-    //             required: true,
-    //             email: true
-    //         }
-    //     },
-    //     messages: {
-    //         name: {
-    //             required: "Input your name, please",
-    //             minlength: jQuery.validator.format("Please type {0} characters!")
-    //         },
-    //         phone: "Input yur phone number",
-    //         email: {
-    //             required: "We need your email",
-    //             email: "Your email have not correct format"
-    //         }
-    //     }
-    // });
-    // $('#order form').validate({
-    //     rules: {
-    //         name: 'required',
-    //         phone: 'required',
-    //         email: 'required'
-    //     }
-    // });
-
     function validForms(form) {
         $(form).validate({
             rules: {
@@ -116,9 +83,29 @@ $(document).ready(function () {
     }
 
     validForms('#consultation-form');
-
     validForms('#consultation form');
-
     validForms('#order form');
 
+    $("input[name=phone]").mask("+7 (999) 999-99-99");
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+
+        if (!$(this).valid()) {
+            return;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: 'mailer/smart.php',
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset')
+        });
+        return false;
+    });
 });
