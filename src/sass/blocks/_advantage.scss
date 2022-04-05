@@ -45,5 +45,16 @@
         font-family: "Helvetica";
       }
     }
+    &_animated {
+      width: 70px;
+      animation: heartbeat 1.2s ease infinite;
+      //animation-name: heartbeat;
+      //animation-duration: 2s;
+      //animation-timing-function: ease;
+      //animation-iteration-count: infinite;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
   }
 }
