@@ -153,39 +153,44 @@
       }
     }
 
-    &__list {
-      position: relative;
+    &__block {
       width: 50%;
       margin-left: 20px;
       transform: translateX(0%);
       padding-right: 20px;
       padding-left: 0;
       margin-bottom: 0;
-      list-style-type: none;
-
       &_active {
         transform: translateX(-100%);
         margin-left: 0;
       }
 
-      li {
+      .catalog-item__list {
+        list-style-type: none;
         position: relative;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 21px;
-        color: #555555;
-        margin-bottom: 10px;
 
-        &:before {
-          position: absolute;
-          content: '';
-          width: 3px;
-          height: 3px;
-          background-color: $main-color;
-          left: -9px;
-          top: 9px;
+        li {
+          position: relative;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 21px;
+          color: #555555;
+          margin-bottom: 10px;
+
+          &:before {
+            position: absolute;
+            content: '';
+            width: 3px;
+            height: 3px;
+            background-color: $main-color;
+            left: -9px;
+            top: 9px;
+          }
         }
+
       }
+
+
     }
   }
 }
